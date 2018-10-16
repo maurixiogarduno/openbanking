@@ -86,16 +86,266 @@
             echo "TermsOfUse: ", print_r($data['meta']['TermsOfUse'],true);
             echo "<br>";
 
+            //Algoritmo ATM
+            //Elige el 1er cliente del API
+            $initial = $data['data']['0']['Brand']['0']['ATM']['0'];
+            //print_r($initial);
+            //echo "<br>";
+
+            //Accessibility
+
+            if (array_key_exists('Accessibility',$initial)){
+            echo "Accessibility exists...";
+
+            }else{
+            echo "Accessibility not exist...";
+            }
+            echo "<br>";
+            //Access24HoursIndicator
+
+            if (array_key_exists('Access24HoursIndicator',$initial)){
+            echo "Access24HoursIndicator exists...";
+            }else{
+            echo "Access24HoursIndicator not exist...";
+            }
+            echo "<br>";
+            //SupportedLanguages
+
+            if (array_key_exists('SupportedLanguages',$initial)){
+            echo "SupportedLanguages exists...";
+            }else{
+            echo "SupportedLanguages not exist...";
+            }
+            echo "<br>";
+            //Identification
+
+            if (array_key_exists('Identification',$initial)){
+            echo "Identification exists...";
+            }else{
+            echo "Identification not exist...";
+            }
+            echo "<br>";
+            //MinimumPossibleAmount
+
+            if (array_key_exists('MinimumPossibleAmount',$initial)){
+            echo "MinimumPossibleAmount exists...";
+            }else{
+            echo "MinimumPossibleAmount not exist...";
+            }
+            echo "<br>";
+            //Note
+
+            if (array_key_exists('Note',$initial)){
+            echo "Note exists...";
+            }else{
+            echo "Note not exist...";
+            }
+            echo "<br>";
+            //OpenBankingATM
+
+            if (array_key_exists('OpenBankingATM',$initial)){
+            echo "OpenBankingATM exists...";
+            }else{
+            echo "OpenBankingATM not exist...";
+            }
+            echo "<br>";
+            //SupportedCurrencies
+
+            if (array_key_exists('SupportedCurrencies',$initial)){
+            echo "SupportedCurrencies exists...";
+            }else{
+              echo "SupportedCurrencies not exist...";
+            }
+            echo "<br>";
+            //OtherAccessibility
+
+            if (array_key_exists('OtherAccessibility',$initial)){
+              echo "OtherAccessibility exists...";
+            }else{
+            echo "OtherAccessibility not exist...";
+            }
+            echo "<br>";
+            //OtherATMServices
+
+            if (array_key_exists('OtherATMServices',$initial)){
+              echo "OtherATMServices exists...";
+            }else{
+            echo "OtherATMServices not exist...";
+            }
+            echo "<br>";
+            //Branch
+
+            if (array_key_exists('Branch',$initial)){
+              echo "Branch exists...";
+            }else{
+            echo "Branch not exist...";
+            }
+            echo "<br>";
+
+            //Location
+
+            if (array_key_exists('Location',$initial)){
+              echo "Location exists...";
+              //Site
+
+              if (array_key_exists('Site',$initial['Location'])){
+              echo "  Site exists...";
+              
+              }else{
+              echo "  Site not exist...";
+              }
+              echo "<br>";
+              //PostalAddress
+
+              if (array_key_exists('PostalAddress',$initial['Location'])){
+              echo "  PostalAddress exists...";
+              
+              }else{
+              echo "  PostalAddress not exist...";
+              }
+              echo "<br>";
+              //BranchExternal
+
+              if (array_key_exists('BranchExternal',$initial['Location'])){
+              echo "  BranchExternal exists...";
+              
+              }else{
+              echo "  BranchExternal not exist...";
+              }
+              echo "<br>";
+              //BranchLooby
+
+              if (array_key_exists('BranchLooby',$initial['Location'])){
+              echo "  BranchLooby exists...";
+              
+              }else{
+              echo "  BranchLooby not exist...";
+              }
+              echo "<br>";
+
+              //Other
+
+              if (array_key_exists('Other',$initial['Location'])){
+              echo "  Other exists...";
+              
+              }else{
+              echo "  Other not exist...";
+              }
+              echo "<br>";
+
+              //RetailerOutlet
+
+              if (array_key_exists('RetailerOutlet',$initial['Location'])){
+              echo "  RetailerOutlet exists...";
+              
+              }else{
+              echo "  RetailerOutlet not exist...";
+              }
+              echo "<br>";
+
+              //PostalAddress
+
+              if (array_key_exists('PostalAddress',$initial['Location'])){
+              echo "  PostalAddress exists...";
+              
+              }else{
+              echo "  PostalAddress not exist...";
+              }
+              echo "<br>";
+
+              //RemoteUnit
+
+              if (array_key_exists('RemoteUnit',$initial['Location'])){
+              echo "  RemoteUnit exists...";
+              
+              }else{
+              echo "  RemoteUnit not exist...";
+              }
+              echo "<br>";
+
+              //Latitude
+
+              if (array_key_exists('Latitude',$initial['Location'])){
+              echo "  Latitude exists...";
+              
+              }else{
+              echo "  Latitude not exist...";
+              }
+              echo "<br>";
+
+              //OtherLocationCategory
+
+              if (array_key_exists('OtherLocationCategory',$initial['Location'])){
+                echo "  OtherLocationCategory exists...";               
+                echo "<br>";
+                //Description
+
+                if (array_key_exists('Description',$initial['Location']['OtherLocationCategory'])){
+                echo "  Description exists...";
+              
+                }else{
+                echo "  Description not exist...";
+                }
+                echo "<br>";
+                //Name
+
+                if (array_key_exists('Name',$initial['Location']['OtherLocationCategory'])){
+                echo "  Name exists...";
+              
+                }else{
+                echo "  Name not exist...";
+                }
+                echo "<br>";
+              
+              }else{
+              echo "  OtherLocationCategory not exist...";
+              }
+              echo "<br>";
+
+              //Longitude
+
+              if (array_key_exists('Longitude',$initial['Location'])){
+              echo "  Longitude exists...";
+              
+              }else{
+              echo "  Longitude not exist...";
+              }
+              echo "<br>";
+
+              //LocationCategory
+
+              if (array_key_exists('LocationCategory',$initial['Location'])){
+              echo "  LocationCategory exists...";
+              
+              }else{
+              echo "  LocationCategory not exist...";
+              }
+              echo "<br>";
+
+            }else{
+            echo "Location not exist...";
+            }
+            echo "<br>";
+
+            //ATMServices
+
+            if (array_key_exists('ATMServices',$initial)){
+            echo "ATMServices exists...";
+            }else{
+            echo "ATMServices not exist...";
+            }
+            echo "<br>";
+
+
+            echo "<br>";
 
             echo "Prueba: ", print_r($data['meta']['Prueba'], true);
 
             echo "<br>";
 
-            if (condition) {
-              // code...
-            }
+           
 
-            // echo "API: ", print_r($data);
+            //echo "API: ", print_r($data['meta']);
 
           ?>
         </div>
